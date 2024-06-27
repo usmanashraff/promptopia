@@ -4,7 +4,7 @@ import Profile from "@components/Profile"
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 
-const page = () => {
+const Page = () => {
     const {data: session, status} = useSession()
     const [posts, setposts] = useState([])
     const router = useRouter()
@@ -56,4 +56,4 @@ if(confirmDelete){
   )
 }
 
-export default page
+export default Page
