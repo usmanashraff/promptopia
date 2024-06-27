@@ -1,6 +1,6 @@
 "use client"
 import Form from "@components/Form"
-import { useEffect, useState } from "react"
+import { useEffect, useState, Suspense} from "react"
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
@@ -53,7 +53,9 @@ const Page = () => {
     }
 
   return (
-    <div>
+   
+      <Suspense fallback={<div>Loading...</div>}>
+      <div>
         <Form
         type= "Edit"
         submitting = {submitting}
@@ -62,6 +64,7 @@ const Page = () => {
         setpost = {setpost}
         />
     </div>
+    </Suspense>
   )
 }
 
