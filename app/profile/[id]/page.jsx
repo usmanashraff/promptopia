@@ -3,7 +3,7 @@ import Profile from "@components/Profile"
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 
-const page = ({params}) => {
+const Page = ({params}) => {
     const [posts, setposts] = useState([])
     const searchParams = useSearchParams()
     const username = searchParams.get('name')
@@ -35,4 +35,4 @@ const page = ({params}) => {
   )
 }
 
-export default page
+export default Page

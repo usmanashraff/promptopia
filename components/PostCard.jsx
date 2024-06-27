@@ -23,7 +23,7 @@ const PostCard = ({post, handleTagClick, handleDelete, handleEdit}) => {
             router.push('/profile')
         router.push(`/profile/${post.creater._id}?name=${post.creater.username}`);
         //else
-       // router.push(`/profile/${post.creater._id}?name=${post.creater.username}`)
+       // router.push(`/profile/${post.creater._id}?username=${post.creater.username}`)
     }
 
   return (
@@ -45,6 +45,7 @@ const PostCard = ({post, handleTagClick, handleDelete, handleEdit}) => {
             <div className="copy_btn" onClick={handleCopy}>
                 <Image src={copied === post.prompt? 'assets/icons/tick.svg': '/assets/icons/copy.svg'}
                 width={12}
+                alt=""
                 height={12} />
             </div>
         </div>

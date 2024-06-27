@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
-const page = () => {
+const Page = () => {
     const router = useRouter()
     const searchParams = useSearchParams();
     const promptId = searchParams.get('id')
@@ -65,4 +65,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
